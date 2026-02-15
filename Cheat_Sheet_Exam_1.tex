@@ -1,0 +1,238 @@
+\documentclass[8pt,landscape]{extarticle}
+\usepackage[margin=0.15in]{geometry}
+\usepackage{multicol}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{CJKutf8}
+\usepackage{booktabs}
+\usepackage{array}
+
+% Compact formatting
+\setlist{nosep}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\columnseprule}{0.4pt}
+\linespread{0.85}
+
+% Compact section titles
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\hrule]
+\titleformat{\subsection}{\bfseries}{}{0em}{}
+\titlespacing*{\section}{0pt}{1pt}{1pt}
+\titlespacing*{\subsection}{0pt}{1pt}{0pt}
+
+\begin{document}
+\begin{CJK*}{UTF8}{gbsn}
+\scriptsize
+
+\begin{center}
+    {\large \textbf{Health Economics Exam 1 Cheat Sheet (Weeks 1-4)}}
+\end{center}
+
+\begin{multicols*}{3}
+
+\section{Week 1: Intro \& Concepts (导论)}
+\textbf{Health Econ (卫生经济学)}: Econ applied to health. Focus on allocation of scarce resources among competing ends.
+\textbf{Scarcity (稀缺性)}: Resources (time, money, personnel) are limited vs. wants are unlimited. $\rightarrow$ Must choose.
+\textbf{Opportunity Cost (机会成本)}: Value of \textit{next best alternative} forgone.
+$$ \text{Opp Cost} = \text{Value of Best Alternative Forgone} $$
+\textit{Example}: 
+\begin{itemize}
+    \item \textbf{Avastin vs. Sovaldi}: Spending on cancer drug means less for Hep C drug.
+    \item \textbf{School}: Tuition + Books + \textbf{Forgone Earnings (因上学损失的工资)}.
+\end{itemize}
+\textbf{Rationality (理性)}: 1. Completeness, 2. Transitivity, 3. Maximize Utility.
+\textbf{Thinking on Margin (边际思维)}: Decision based on \textit{incremental} cost/benefit. "What does ONE more unit cost/benefit?"
+\textbf{Positive (实证)}: "What is" (Fact, objective). \textbf{Normative (规范)}: "What should be" (Value, subjective).
+
+\subsection{Production Possibility Frontier (PPF 生产可能性边界)}
+Max combo of 2 goods given resources/tech.
+\begin{itemize}
+    \item \textbf{On curve}: Efficient (效率最高).
+    \item \textbf{Inside}: Inefficient (Resource wasted).
+    \item \textbf{Outside}: Impossible (Unless Tech shift).
+    \item \textbf{Slope}: Opportunity Cost (Give up Y to get X).
+    \item \textbf{Shift}: Tech $\uparrow$ or Resources $\uparrow$ $\to$ Shift Out.
+\end{itemize}
+
+\section{Week 2: Demand for Health (健康需求)}
+\textbf{Utility ($U$, 效用)}: Satisfaction. \textbf{Marginal Utility ($MU$)}: $\Delta U / \Delta Q$. Diminishing $MU$ (边际效用递减): First unit gives most joy.
+\textbf{Demand}: Willingness to Pay (WTP) = Marginal Benefit (MB).
+$$ MB = \frac{\Delta \text{Total Benefit}}{\Delta Q} $$
+
+\subsection{Consumer Choice (消费者选择)}
+\textbf{Indifference Curve (IC, 无差异曲线)}: Bundles giving equal $U$.
+\begin{itemize}
+    \item Downward slope, Convex to origin, Non-intersecting.
+    \item Further from origin = Higher Utility.
+    \item \textbf{Slope}: Marginal Rate of Substitution ($MRS_{xy}$).
+\end{itemize}
+\textbf{Budget Constraint (BC, 预算约束)}: $I = P_x X + P_y Y$. Slope $= -P_x/P_y$.
+\textbf{Equilibrium (均衡)}: Max $U$ s.t. Budget. Tangency condition (切点):
+$$ MRS_{xy} = \frac{P_x}{P_y} \quad (\text{Marginal Benefit Ratio} = \text{Price Ratio}) $$
+
+\subsection{Grossman Model (格罗斯曼模型)}
+\textbf{Concept}: Health is \textbf{Consumption} (feel good) \& \textbf{Investment} (healthy time $h_t$ for work/leisure).
+\textbf{Health Capital}: Stock $H_t$ depreciates at rate $\delta$.
+\textbf{Optimal Investment Condition}:
+$$ MEC = r + \delta $$
+\begin{itemize}
+    \item $MEC$: Marginal Efficiency of Capital (Return on health inv).
+    \item $r$: Interest rate (Opportunity cost of capital).
+    \item $\delta$: Depreciation rate (折旧率).
+    \item \textbf{Aging}: As Age $\uparrow \to \delta \uparrow \to (r+\delta) \uparrow \to$ Optimal Health Stock $H^* \downarrow$.
+\end{itemize}
+
+\subsection{Demand Shifters (需求变动因素)}
+\textbf{Movement}: Only by Own Price $\Delta$.
+\textbf{Shift}:
+1. \textbf{Income}: Normal (Income $\uparrow D \uparrow$) vs. Inferior (Income $\uparrow D \downarrow$).
+2. \textbf{Related Goods}: Substitutes ($P_y \uparrow D_x \uparrow$), Complements ($P_y \uparrow D_x \downarrow$).
+3. \textbf{Tastes}: e.g., study says apples toxic $\to D \downarrow$.
+4. \textbf{Expectations}: Expect price rise $\to$ Buy now ($D \uparrow$).
+5. \textbf{Population}: \# Buyers $\uparrow \to D \uparrow$.
+
+\subsection{Elasticity (弹性)}
+\textbf{1. Own-Price Elasticity ($E_d$)}: Sensitivity of $Q_d$ to $P$.
+$$ E_d = \frac{\%\Delta Q}{\%\Delta P} = \frac{\partial Q}{\partial P} \frac{P}{Q} $$
+\begin{itemize}
+    \item $|E_d|>1$ \textbf{Elastic}: (Luxury). $P \uparrow \to TR \downarrow$.
+    \item $|E_d|<1$ \textbf{Inelastic}: (Medical care). $P \uparrow \to TR \uparrow$.
+    \item $|E_d|=1$ \textbf{Unit}: Max Total Revenue.
+\end{itemize}
+
+\textbf{2. Cross-Price Elasticity ($E_{xy}$)}:
+$$ E_{xy} = \frac{\%\Delta Q_x}{\%\Delta P_y} $$
+\begin{itemize}
+    \item $>0$: \textbf{Substitutes} (替代品).
+    \item $<0$: \textbf{Complements} (互补品).
+\end{itemize}
+
+\textbf{3. Income Elasticity ($E_I$)}:
+$$ E_I = \frac{\%\Delta Q}{\%\Delta I} $$
+\begin{itemize}
+    \item $>0$: \textbf{Normal} (Necessity $0<E<1$, Luxury $E>1$).
+    \item $<0$: \textbf{Inferior} (低档品).
+\end{itemize}
+
+\subsection{Moral Hazard (道德风险)}
+\textbf{Ex-ante (事前)}: Less prevention b/c insured (smoker).
+\textbf{Ex-post (事后)}: More treatment b/c price lower (consume until $MB = \text{Copay}$).
+\textbf{RAND Exp}: Confirmed Demand slopes down ($E \approx -0.2$). Higher copay $\to$ lower use.
+
+\section{Week 3: Supply \& Production (供给与生产)}
+\textbf{Production Func}: $Q = f(L, K)$.
+\textbf{Isoquant (等产量线)}: Combos of $L,K$ for same $Q$. Slope = MRTS.
+\textbf{Isocost (等成本线)}: $TC = wL + rK$. Slope $= -w/r$.
+\textbf{Marginal Product ($MP$, 边际产量)}: $\Delta Q / \Delta L$.
+\textit{Law of Diminishing Returns}: As $L \uparrow$ (fixed $K$), $MP_L \downarrow$.
+Cobb-Douglas ($Q=AK^\alpha L^\beta$):
+$$ MP_L = \beta \frac{Q}{L}, \quad MP_K = \alpha \frac{Q}{K} $$
+
+\subsection{Costs (成本)}
+\textbf{Short Run}: $K$ fixed ($TFC = rK$). \textbf{Long Run}: All inputs variable.
+\textbf{Formulas}:
+\begin{itemize}
+    \item $TC = TFC + TVC$
+    \item $ATC = TC/Q = AFC + AVC$
+    \item $AVC = TVC/Q = wL/Q = w/AP_L$
+    \item $MC = \Delta TC / \Delta Q = w/MP_L$
+\end{itemize}
+\textbf{Relationships}:
+\begin{itemize}
+    \item $MC$ cuts $ATC$ and $AVC$ at their \textbf{minimum points}.
+    \item $MP \uparrow \implies MC \downarrow$. $MP \downarrow \implies MC \uparrow$.
+    \item $MP > AP \implies AP \uparrow$.
+\end{itemize}
+
+\subsection{Producer Optimization (生产者优化)}
+Minimize cost for given $Q$ (Tangency of Isoquant and Isocost):
+$$ \frac{MP_L}{MP_K} = \frac{w}{r} \iff \frac{MP_L}{w} = \frac{MP_K}{r} $$
+\textbf{Meaning}: Last dollar spent on Labor = Last dollar spent on Capital.
+
+\subsection{Profit Max (利润最大化)}
+Rule: Produce where $MR = MC$.
+Perf. Comp ($P$ is fixed): $P = MC$.
+\textbf{Shutdown}: If $P < \min(AVC)$, shut down in short run.
+
+\section{Week 4: Market \& Welfare (市场与福利)}
+\textbf{Equilibrium}: $Q_s = Q_d$. Market Clears.
+\textbf{Comparative Statics}:
+\begin{itemize}
+    \item Demand $\uparrow$: $P \uparrow, Q \uparrow$.
+    \item Supply $\uparrow$: $P \downarrow, Q \uparrow$.
+    \item Demand $\uparrow$ + Supply $\downarrow$: $P \uparrow$, $Q$ ambiguous.
+\end{itemize}
+
+\subsection{Welfare Analysis (福利分析)}
+\textbf{CS (消费者剩余)}: Area below Demand, above Price. Value of WTP - Price paid.
+\textbf{PS (生产者剩余)}: Area below Price, above Supply. Price received - MC.
+\textbf{Total Surplus (TS)}: $CS + PS$. Max at Equilibrium.
+\textbf{DWL (无谓损失)}: Loss in TS due to distortion (Tax, Monopoly, Price Control).
+
+\subsection{Price Controls (价格管制)}
+\textbf{1. Price Ceiling (上限)}: Max legal price.
+\begin{itemize}
+    \item Effective if Set $< P^*$ (Below Eq).
+    \item \textbf{Consequences}: Shortage ($Q_d > Q_s$), Black Market, Queues (Time cost), Quality deterioration.
+\end{itemize}
+\textbf{2. Price Floor (下限)}: Min legal price (e.g., min wage).
+\begin{itemize}
+    \item Effective if Set $> P^*$ (Above Eq).
+    \item \textbf{Consequences}: Surplus ($Q_s > Q_d$, Unemployment).
+\end{itemize}
+
+\section{Key Examples (核心例题详解)}
+
+\subsection{Ex 1: Labor Demand (Blueberry Farm)}
+Given $P=6, W=100$. Find profit stats.
+\textbf{Rule}: Hire if $VMP_L \ge Wage$. ($VMP_L = P \times MP_L$).
+
+\begin{tabular}{cccccc}
+\toprule
+$L$ & $Q$ & $MP_L$ & $VMP_L$ ($6 \times MP$) & Cost & Decision \\
+\midrule
+0 & 0 & - & - & - & - \\
+1 & 70 & 70 & 420 & 100 & Yes \\
+2 & 130 & 60 & 360 & 100 & Yes \\
+3 & 180 & 50 & 300 & 100 & Yes \\
+4 & 220 & 40 & 240 & 100 & Yes \\
+5 & 250 & 30 & 180 & 100 & Yes \\
+\textbf{6} & \textbf{260} & \textbf{10} & \textbf{60} & \textbf{100} & \textbf{No} \\
+\bottomrule
+\end{tabular}
+\\
+\textbf{Conclusion}: Optimal $L^* = 5$. At $L=6$, cost (100) > benefit (60).
+
+\subsection{Ex 2: Cobb-Douglas Optimization (生产要素优化)}
+\textbf{Given}: $Q=K^{0.4}L^{0.6}, w=1, r=1, Cost=200$. Find $K^*, L^*$.
+\textbf{Step 1: Derivatives}
+$$ MP_L = 0.6 \frac{Q}{L}, \quad MP_K = 0.4 \frac{Q}{K} $$
+\textbf{Step 2: Optimization Condition} ($MRTS = w/r$)
+$$ \frac{MP_L}{MP_K} = \frac{0.6 Q/L}{0.4 Q/K} = 1.5 \frac{K}{L} = \frac{1}{1} \implies L = 1.5K $$
+\textbf{Step 3: Budget Constraint}
+$$ wL + rK = 200 \implies 1(1.5K) + 1(K) = 200 $$
+$$ 2.5K = 200 \implies \mathbf{K^* = 80} $$
+\textbf{Step 4: Solve for L}
+$$ L^* = 1.5(80) \implies \mathbf{L^* = 120} $$
+
+\subsection{Ex 3: Doctor Productivity \& Costs}
+\textbf{Given}: $10h$ shift, $20$ pts. Wage $\$100/h$, MRI $\$50k$ (Fixed).
+\textbf{1. Average Product (AP)}: $Q/L = 20/10 = 2$ pts/hr.
+\textbf{2. TVC}: $w \cdot L = 100 \times 10 = \$1000$.
+\textbf{3. AVC}: $TVC/Q = 1000/20 = \$50$.
+\textbf{4. ATC}: $(TFC+TVC)/Q = 51000/20 = \$2550$.
+\textbf{Marginal Inference}: Since $MP$ is diminishing ($MP < AP$), the last patient takes \textbf{longer} than average ($>30$ min), so Marginal Cost is \textbf{higher} than average ($MC > \$50$).
+
+\subsection{Common Mistakes \& Tips}
+\begin{itemize}
+    \item \textbf{Elasticity vs Slope}: They are related but NOT the same. Elasticity changes along a linear demand curve.
+    \item \textbf{Sunk Cost}: Fixed costs (like MRI machine bought) are sunk in short run. Do not affect marginal decision ($MC$).
+    \item \textbf{Income Effect}: For inferior goods, Income $\uparrow \to Q \downarrow$.
+    \item \textbf{Shut down}: Compare Price to $AVC$, not $ATC$. Even if losing money, if $P>AVC$, keep running to cover some fixed costs.
+\end{itemize}
+
+\end{multicols*}
+\end{CJK*}
+\end{document}
