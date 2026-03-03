@@ -1,0 +1,147 @@
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{mathpazo} % Palatino font for a nice look
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage{tikz}
+
+%% ============================================================
+%% CONFIGURATION — Update these for each assignment
+%% ============================================================
+\newcommand{\AssignmentNumber}{X}          % <-- Change to 1, 2, 3, etc.
+\newcommand{\StudentName}{Xuange Liang}
+\newcommand{\StudentUni}{xl3493}
+
+% Setup header/footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Health Economics -- Assignment \AssignmentNumber}
+\lhead{Name: \StudentName\ (\StudentUni)}
+\cfoot{Page \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Format section titles
+\titleformat{\section}{\large\bfseries\color{blue!60!black}}{}{0em}{}[\vspace{-0.5em}\rule{\textwidth}{0.5pt}]
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+
+\begin{document}
+
+\begin{center}
+    \LARGE\bfseries Health Economics -- Assignment \AssignmentNumber
+\end{center}
+\vspace{1em}
+
+%% ============================================================
+%% QUESTION TEMPLATE BLOCKS (copy & adapt as needed)
+%% ============================================================
+
+%% ------ Text-Only Question ------
+\section*{1. [Question text here] (X points)}
+
+Your answer here.
+
+%% ------ Question with Sub-parts ------
+\section*{2. [Question text here] (X points)}
+
+\textbf{a) [Sub-question a text] (X points)} \\
+Your answer here.
+
+\textbf{b) [Sub-question b text] (X points)} \\
+Your answer here.
+
+%% ------ Question with Itemized Answer ------
+\section*{3. [Question text here] (X points)}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Point 1}: Your explanation here.
+    \item \textbf{Point 2}: Your explanation here.
+\end{itemize}
+
+%% ------ Question with Math Derivation ------
+\section*{4. [Question text here] (X points)}
+
+\textbf{a) [Sub-question] (X points)} \\
+Set up and solve:
+\begin{align*}
+    MR &= MC \\
+    % Your derivation steps here
+\end{align*}
+
+%% ------ Question with TikZ Graph ------
+\section*{5. [Question requiring a graph] (X points)}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    % Axes
+    \draw[->, thick] (0,0) -- (6,0) node[right] {$X$-axis label};
+    \draw[->, thick] (0,0) -- (0,5) node[above] {$Y$-axis label};
+    
+    % Curves (examples — uncomment / modify as needed)
+    % \draw[thick, blue, domain=0.5:5, samples=100] plot (\x, {4/\x}) node[right] {Curve 1};
+    % \draw[thick, red] (0,4) -- (4,0) node[right] {Line 1};
+    
+    % Key points
+    % \filldraw[black] (2,2) circle (2pt) node[anchor=south west] {Label};
+    % \draw[dashed] (2,0) -- (2,2) -- (0,2);
+    
+    % Axis tick marks
+    % \foreach \x/\xtext in {2/100, 4/200} \draw (\x,2pt) -- (\x,-2pt) node[below] {$\xtext$};
+    % \foreach \y/\ytext in {2/100, 4/200} \draw (2pt,\y) -- (-2pt,\y) node[left] {$\ytext$};
+\end{tikzpicture}
+\end{center}
+
+Your explanation of the graph here.
+
+%% ------ Question with Given Information + Calculation ------
+\section*{6. [Scenario-based question] (X points)}
+
+\textbf{Given Information}:
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item Variable 1: value
+    \item Variable 2: value
+\end{itemize}
+
+\textbf{a) [Calculation sub-question] (X points)} \\
+Formula: $\text{Result} = \frac{\text{Numerator}}{\text{Denominator}}$ \\
+\textbf{Answer}: Your calculated answer here.
+
+%% ------ Question with Enumerated List ------
+\section*{7. [Question text here] (X points)}
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Dimension / Cause / Factor 1}: Explanation here. \\
+    \textit{Example}: Your example here.
+    \item \textbf{Dimension / Cause / Factor 2}: Explanation here. \\
+    \textit{Example}: Your example here.
+\end{enumerate}
+
+%% ------ Combined Graph + Multi-part Calculation ------
+\section*{8. [Complex multi-part question] (X points)}
+
+\textbf{a) [Graph sub-question] (X points)}
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    \draw[->, thick] (0,0) -- (6,0) node[right] {$Q$};
+    \draw[->, thick] (0,0) -- (0,5) node[above] {$P$};
+    % Your curves and labels here
+\end{tikzpicture}
+\end{center}
+
+\textbf{b) [Calculation sub-question] (X points)}
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item \textbf{Total Revenue (TR)}: calculation $= \textbf{\$X}$
+    \item \textbf{Total Cost (TC)}: calculation $= \textbf{\$X}$
+    \item \textbf{Profit ($\pi$)}: $TR - TC = \textbf{\$X}$
+\end{itemize}
+
+\textbf{c) [Explanation sub-question] (X points)} \\
+Your explanation here.
+
+\end{document}
