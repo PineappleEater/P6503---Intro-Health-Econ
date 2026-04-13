@@ -1,0 +1,204 @@
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{mathpazo}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+
+% Setup header/footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Health Economics -- Assignment 4}
+\lhead{Name: Xuange Liang (xl3493)}
+\cfoot{Page \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{14pt}
+
+% Format section titles
+\titleformat{\section}{\large\bfseries\color{blue!60!black}}{}{0em}{}[\vspace{-0.5em}\rule{\textwidth}{0.5pt}]
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+
+\begin{document}
+
+\begin{center}
+    \LARGE\bfseries Health Economics -- Assignment 4
+\end{center}
+\vspace{1em}
+
+\section*{1. Design a Simple CEA (25 points)}
+
+\textbf{1a) Analytic perspective (4 points)} \\
+I would use a \textbf{health care payer perspective}. A national health technology assessment agency usually decides whether the health system should pay for the drug, so it mainly cares about costs borne by the insurer or government. That makes the payer perspective the most relevant for this decision.
+
+\textbf{1b) Time horizon (4 points)} \\
+I would use a \textbf{lifetime time horizon}. Drug X may affect both survival and quality of life beyond the trial period, so a short horizon could miss part of its benefits and later costs. A lifetime horizon is more appropriate for capturing the full value of treatment.
+
+\textbf{2a) Comparator (4 points)} \\
+The comparator should be \textbf{standard chemotherapy as the current active standard of care}. In a cost-effectiveness analysis, the main question is whether Drug X improves on what patients already receive in practice. A placebo comparator would be less realistic and could overstate the incremental benefit.
+
+\textbf{2b) Primary outcome (3 points)} \\
+My primary outcome would be \textbf{QALYs}. For metastatic breast cancer, treatment can change both length of life and quality of life, so QALYs are more informative than life-years alone. They are also the standard outcome used in many HTA decisions.
+
+\textbf{3a) Total QALYs for Drug X (4 points)} \\
+\begin{align*}
+\text{QALYs}_{Drug X} &= (3 \times 0.75) + (2 \times 0.50) \\
+&= 2.25 + 1.00 \\
+&= \textbf{3.25 \ QALYs}
+\end{align*}
+
+\textbf{3b) Total QALYs for comparator (3 points)} \\
+\begin{align*}
+\text{QALYs}_{Comp} &= 4 \times 0.60 \\
+&= \textbf{2.40 \ QALYs}
+\end{align*}
+
+\textbf{3c) Incremental QALYs and interpretation (3 points)} \\
+\begin{align*}
+\Delta \text{QALYs} &= \text{QALYs}_{Drug X} - \text{QALYs}_{Comp} \\
+&= 3.25 - 2.40 \\
+&= \textbf{0.85 \ QALYs}
+\end{align*}
+Drug X generates \textbf{0.85 additional QALYs per patient} relative to standard chemotherapy.
+
+\section*{2. Base-Case ICER and Discounting (20 points)}
+
+\textbf{1a) Incremental cost (3 points)} \\
+\begin{align*}
+\Delta C &= \$200{,}000 - \$120{,}000 \\
+&= \textbf{\$80{,}000}
+\end{align*}
+
+\textbf{1b) Base-case ICER (5 points)} \\
+\begin{align*}
+ICER &= \frac{\Delta C}{\Delta E} = \frac{\$80{,}000}{0.85} \\
+&= \textbf{\$94{,}117.65 \text{ per QALY}}
+\end{align*}
+
+\textbf{1c) Cost-effectiveness at a WTP threshold of \$100,000/QALY (2 points)} \\
+\textbf{Yes.} Drug X is cost-effective in the base case because its ICER of \textbf{\$94,117.65 per QALY} is below the \textbf{\$100,000 per QALY} willingness-to-pay threshold.
+
+\textbf{2a) Present value formula for 1 QALY 30 years from now (3 points)} \\
+\[
+PV = \frac{1}{(1+0.03)^{30}}
+\]
+
+\textbf{2b) Numerical present value (4 points)} \\
+\begin{align*}
+PV &= \frac{1}{(1.03)^{30}} \\
+&\approx \textbf{0.41 \ QALYs}
+\end{align*}
+
+\textbf{2c) Discounting and the prevention paradox (3 points)} \\
+Discounting reduces the weight placed on health gains that occur far in the future. As a result, preventive or long-horizon interventions can look less cost-effective even when they generate large total benefits. This is related to the prevention paradox because important population health gains may be undervalued when they arrive later.
+
+\section*{3. Obesity Case: ICERs and Frontier (20 points)}
+
+\textbf{1a) Ordering by QALYs (2 points)} \\
+The strategies are already correctly ordered from least to most effective:
+\begin{itemize}[leftmargin=*]
+    \item A: 6.20 QALYs
+    \item B: 6.50 QALYs
+    \item C: 6.65 QALYs
+    \item D: 7.40 QALYs
+\end{itemize}
+
+\textbf{1b) Incremental ICERs (10 points)}
+
+\textit{B vs A}
+\begin{align*}
+\Delta C &= \$18{,}000 - \$12{,}000 = \$6{,}000 \\
+\Delta E &= 6.50 - 6.20 = 0.30 \\
+ICER &= \frac{\$6{,}000}{0.30} = \textbf{\$20{,}000 \text{ per QALY}}
+\end{align*}
+
+\textit{C vs B}
+\begin{align*}
+\Delta C &= \$28{,}000 - \$18{,}000 = \$10{,}000 \\
+\Delta E &= 6.65 - 6.50 = 0.15 \\
+ICER &= \frac{\$10{,}000}{0.15} \approx \textbf{\$66{,}666.67 \text{ per QALY}}
+\end{align*}
+
+\textit{D vs C}
+\begin{align*}
+\Delta C &= \$95{,}000 - \$28{,}000 = \$67{,}000 \\
+\Delta E &= 7.40 - 6.65 = 0.75 \\
+ICER &= \frac{\$67{,}000}{0.75} \approx \textbf{\$89{,}333.33 \text{ per QALY}}
+\end{align*}
+
+\textbf{2a) Strict dominance (3 points)} \\
+\textbf{No.} None of the strategies is strictly dominated because no strategy has both higher cost and lower QALYs than another strategy.
+
+\textbf{2b) Extended dominance and frontier (5 points)} \\
+Compute \textit{D vs B} directly:
+\begin{align*}
+\Delta C &= \$95{,}000 - \$18{,}000 = \$77{,}000 \\
+\Delta E &= 7.40 - 6.50 = 0.90 \\
+ICER &= \frac{\$77{,}000}{0.90} \approx \textbf{\$85{,}555.56 \text{ per QALY}}
+\end{align*}
+Because the ICER of \textit{C vs B} is \textbf{\$66,666.67/QALY}, which is \textbf{lower} than the direct ICER of \textit{D vs B} at \textbf{\$85,555.56/QALY}, \textbf{C is not extended-dominated}. Therefore, \textbf{C remains on the efficient frontier}, and the frontier is \textbf{A-B-C-D}.
+
+\section*{4. Threshold-Based Decisions and Equity (15 points)}
+
+\textbf{1a) Threshold = \$50,000 per QALY (3 points)} \\
+At \textbf{\$50,000/QALY}, the preferred strategy is \textbf{B: Lifestyle counseling}. Its ICER relative to A is only \textbf{\$20,000/QALY}, which is below the threshold, while the next incremental step, \textit{C vs B}, costs \textbf{\$66,666.67/QALY}, which is above the threshold.
+
+\textbf{1b) Threshold = \$100,000 per QALY (3 points)} \\
+At \textbf{\$100,000/QALY}, the preferred frontier strategy is \textbf{D: Branded GLP-1 agonist}. All frontier ICERs (\textbf{\$20,000}, \textbf{\$66,666.67}, and \textbf{\$89,333.33} per QALY) are below the threshold, so the most effective strategy on the frontier should be chosen.
+
+\textbf{1c) Threshold = \$3,000 per QALY (3 points)} \\
+At \textbf{\$3,000/QALY}, \textbf{none of the active interventions} is cost-effective. Even the least expensive improvement, \textit{B vs A}, has an ICER of \textbf{\$20,000/QALY}, which is well above the threshold, so \textbf{A: No intervention} would be chosen.
+
+\textbf{2) Equity and global thresholds (6 points)} \\
+These results show that cost-effectiveness depends heavily on local budget constraints. A strategy that looks acceptable in a high-income country may be unaffordable in a low-income country, even when the health need is the same. That creates an equity problem because access to effective care depends partly on national income. GDP-per-capita-based thresholds try to reflect affordability, but they can also reinforce these global differences.
+
+\section*{5. PrEP Case: Trial vs Real-World ICERs (20 points)}
+
+\textbf{1a) Trial data: ICER for B vs A (4 points)} \\
+\begin{align*}
+ICER_{B vs A} &= \frac{\$8{,}000{,}000 - 0}{180 - 0} \\
+&= \frac{\$8{,}000{,}000}{180} \\
+&\approx \textbf{\$44{,}444.44 \text{ per QALY}}
+\end{align*}
+
+\textbf{1b) Trial data: ICER for C vs B (4 points)} \\
+\begin{align*}
+ICER_{C vs B} &= \frac{\$28{,}000{,}000 - \$8{,}000{,}000}{210 - 180} \\
+&= \frac{\$20{,}000{,}000}{30} \\
+&\approx \textbf{\$666{,}666.67 \text{ per QALY}}
+\end{align*}
+
+\textbf{1c) Preferred strategy under trial assumptions at \$100,000/QALY (2 points)} \\
+The preferred strategy is \textbf{B: Daily oral TDF/FTC}. It is cost-effective relative to no PrEP at about \textbf{\$44,444.44/QALY}, while moving from B to C costs about \textbf{\$666,666.67/QALY}, far above the threshold.
+
+\textbf{2a) Real-world data: ICERs (6 points)}
+
+\textit{B vs A}
+\begin{align*}
+ICER_{B vs A} &= \frac{\$6{,}000{,}000 - 0}{105 - 0} \\
+&= \frac{\$6{,}000{,}000}{105} \\
+&\approx \textbf{\$57{,}142.86 \text{ per QALY}}
+\end{align*}
+
+\textit{C vs B}
+\begin{align*}
+ICER_{C vs B} &= \frac{\$27{,}000{,}000 - \$6{,}000{,}000}{200 - 105} \\
+&= \frac{\$21{,}000{,}000}{95} \\
+&\approx \textbf{\$221{,}052.63 \text{ per QALY}}
+\end{align*}
+
+\textit{C vs A}
+\begin{align*}
+ICER_{C vs A} &= \frac{\$27{,}000{,}000 - 0}{200 - 0} \\
+&= \frac{\$27{,}000{,}000}{200} \\
+&= \textbf{\$135{,}000 \text{ per QALY}}
+\end{align*}
+
+\textbf{2b) Preferred national strategy under real-world effectiveness (4 points)} \\
+At a threshold of \textbf{\$50,000/QALY}, I would choose \textbf{A: No PrEP}, because \textit{B vs A} already costs about \textbf{\$57,142.86/QALY}, which is above the threshold. At a threshold of \textbf{\$150,000/QALY}, I would choose \textbf{B: Daily oral PrEP}, because it is cost-effective relative to A, while moving from B to C still costs about \textbf{\$221,052.63/QALY}. Even though \textit{C vs A} is \textbf{\$135,000/QALY}, the incremental rule still favors B over C.
+
+\end{document}

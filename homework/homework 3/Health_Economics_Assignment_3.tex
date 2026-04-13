@@ -52,9 +52,19 @@
         \node[font=\small\bfseries] at (2.2, 4.2) {Individual Firm};
         \draw[->, thick] (0,0) -- (4.8,0) node[below] {$q$};
         \draw[->, thick] (0,0) -- (0,4) node[left] {$P$};
+        % d = MR = P* (horizontal demand)
         \draw[thick, blue] (0,2) -- (4.2,2);
         \node[blue, font=\footnotesize, anchor=west] at (4.3,2) {$d = MR = P^*$};
         \node[left, font=\footnotesize] at (0,2) {$P^*$};
+        % ATC curve (U-shaped, minimum near q*)
+        \draw[thick, purple] (0.3,3.5) .. controls (1.2,1.2) and (2.2,1.2) .. (4.0,2.8);
+        \node[purple, font=\footnotesize] at (4.2,2.9) {$ATC$};
+        % MC curve (upward sloping, crosses ATC at its minimum)
+        \draw[thick, red] (0.5,0.5) .. controls (1.2,1.0) and (1.8,1.5) .. (3.8,3.8);
+        \node[red, font=\footnotesize] at (3.9,3.9) {$MC$};
+        % q* at MR=MC intersection (~q=2.3)
+        \draw[dashed] (2.3,0) node[below] {\footnotesize $q^*$} -- (2.3,2);
+        \filldraw[black] (2.3,2) circle (2pt);
     \end{scope}
     
     % Connecting arrow
@@ -107,20 +117,28 @@ In a perfectly competitive market, there are many producers selling identical (h
     \draw[thick, red] (0,1) -- (4,5);
     \node[red, font=\footnotesize, anchor=west] at (3.8,4.6) {$MPC=MSC$};
     
-    % Market Eq: MPB = MSC => 5-Q = 1+Q => Q=2, P=3
-    \draw[dashed] (2,0) node[below] {$Q_0$} -- (2,3);
-    \draw[dashed] (0,3) node[left] {\footnotesize $P_0$} -- (2,3);
-    \filldraw[black] (2,3) circle (2pt);
-    \node[font=\footnotesize, anchor=south west] at (2.05,3.05) {Market Eq};
-    
-    % Social Eq: MSB = MSC => 4-Q = 1+Q => Q=1.5, P=2.5
-    \draw[dashed] (1.5,0) node[below] {$Q_1$} -- (1.5,2.5);
-    \filldraw[black] (1.5,2.5) circle (2pt);
-    \node[font=\footnotesize, anchor=north east] at (1.45,2.45) {Social Eq};
+    % Curves: MPB: P=4.5-Q, MSB: P=3.5-Q (MEC=1), MSC: P=1+Q
+    % Market Eq (MPB=MSC): 4.5-Q=1+Q => Q0=1.75, P0=2.75
+    % Social Eq (MSB=MSC): 3.5-Q=1+Q => Q1=1.25, P1=2.25
+    % DWL triangle vertices: Social Eq (1.25,2.25), MSB@Q0=(1.75,1.75), Market Eq (1.75,2.75)
+    \fill[red!20, opacity=0.7] (1.25,2.25) -- (1.75,1.75) -- (1.75,2.75) -- cycle;
+    \node[red!60!black, font=\footnotesize] at (2.05, 2.25) {DWL};
 
-    % MEC annotation
-    \draw[<->, thick, magenta] (4.3, 0.7) -- (4.3, 1.7);
-    \node[magenta, font=\footnotesize, anchor=west] at (4.4, 1.2) {MEC};
+    % Market Eq
+    \draw[dashed] (1.75,0) node[below] {$Q_0$} -- (1.75,2.75);
+    \draw[dashed] (0,2.75) node[left] {\footnotesize $P_0$} -- (1.75,2.75);
+    \filldraw[black] (1.75,2.75) circle (2pt);
+    \node[font=\footnotesize, anchor=south west] at (1.8,2.8) {Market Eq};
+
+    % Social Eq
+    \draw[dashed] (1.25,0) node[below] {$Q_1$} -- (1.25,2.25);
+    \draw[dashed] (0,2.25) node[left] {\footnotesize $P_1$} -- (1.25,2.25);
+    \filldraw[black] (1.25,2.25) circle (2pt);
+    \node[font=\footnotesize, anchor=south east] at (1.2,2.3) {Social Eq};
+
+    % MEC annotation (vertical bracket showing gap between MPB and MSB)
+    \draw[<->, thick, magenta] (4.3, 0.2) -- (4.3, 1.2);
+    \node[magenta, font=\footnotesize, anchor=west] at (4.4, 0.7) {MEC $= 1$};
 \end{tikzpicture}
 \end{center}
 
@@ -132,7 +150,7 @@ The government could impose a \textbf{Pigouvian Tax} on prescription opioids exa
 
 \section*{5. A biotechnology company... Demand: $P = 200 - 5Q$, Total Cost: $TC = 500 + 10Q + 20Q^2$, Marginal Revenue: $MR = 200 - 10Q$, Marginal Cost: $MC = 10 + 2Q$}
 
-\textit{Correction Note: The given Total Cost function $TC = 500 + 10Q + 20Q^2$ is mathematically inconsistent with its given Marginal Cost derivative ($MC = 10 + 2Q$), which strictly implies the intended function was $TC = 500 + 10Q + Q^2$. Using $20Q^2$ would result in massively negative profits and an economic contradiction. Therefore, the mathematically consistent function $TC = 500 + 10Q + Q^2$ is applied for all profit calculations below.}
+\textit{Note: The given $MC = 10 + 2Q$ implies $TC = 500 + 10Q + Q^2$ (since $\frac{d}{dQ}(Q^2) = 2Q$), which is consistent with the stated MC function. All calculations below use $TC = 500 + 10Q + Q^2$ as derived from the given MC.}
 
 \textbf{a) Find the profit-maximizing quantity and price for the monopolist. Show your work. (2 points)} \\
 A monopolist maximizes profit where Marginal Revenue equals Marginal Cost ($MR = MC$).
