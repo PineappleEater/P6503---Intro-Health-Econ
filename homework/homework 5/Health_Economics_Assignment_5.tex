@@ -1,0 +1,103 @@
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{mathpazo} % Palatino font for a nice look
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage{tikz}
+
+% Setup header/footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Health Economics -- Assignment 5}
+\lhead{Name: Xuange Liang (xl3493)}
+\cfoot{Page \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{14pt}
+
+% Format section titles
+\titleformat{\section}{\large\bfseries\color{blue!60!black}}{}{0em}{}[\vspace{-0.5em}\rule{\textwidth}{0.5pt}]
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+
+\begin{document}
+
+\begin{center}
+    \LARGE\bfseries Health Economics -- Assignment 5
+\end{center}
+\vspace{1em}
+
+\section*{Part I – MC (2 points each)}
+
+\textbf{Question 1. Network and referrals} \\
+\textbf{B.} She can see the in-network dermatologist without a referral, paying the usual in-network cost-sharing.
+
+\vspace{1em}
+
+\textbf{Question 2. HDHP and cost-sharing} \\
+\textbf{B.} \$2,200 \\
+\textit{Calculation: She pays the first \$1,500 (deductible). The remaining expense is \$3,500. She pays 20\% of \$3,500, which is \$700. Total out-of-pocket is \$1,500 + \$700 = \$2,200.}
+
+\vspace{1em}
+
+\textbf{Question 3. Ex ante vs ex post moral hazard} \\
+\textbf{B.} A person with full coverage for physical therapy schedules extra sessions mainly for mild soreness.
+
+\vspace{1em}
+
+\textbf{Question 4. Expected utility and buying insurance} \\
+\textbf{C.} The premium is higher than the expected loss, but they are willing to pay extra to avoid financial risk.
+
+\vspace{1em}
+
+\textbf{Question 5. Moral hazard in physical therapy use} \\
+\textbf{D.} Quantity demanded falls, and patient spending per session rises. \\
+\textbf{Bonus Question:} With full insurance, the marginal out-of-pocket cost to the patient is \$0, leading them to consume until their marginal benefit is zero. When uninsured, the patient faces the full market price (\$80), causing them to reduce consumption, while their per-session spending naturally rises from \$0 to the market price of \$80.
+
+\section*{Part II – Problems}
+
+\textbf{Problem 1. Adverse Selection in an insurance market (10 points)}
+
+\textbf{1a) Average expected cost and actuarially fair premium (2 points)} \\
+\begin{align*}
+    \text{Total Expected Cost} &= 250 \times \$400 + 250 \times \$1,200 = \$400,000 \\
+    \text{Average Expected Cost} &= \frac{\$400,000}{500} = \textbf{\$800}
+\end{align*}
+The actuarially fair community premium for the plan would be \textbf{\$800}.
+
+\textbf{1b) Willingness to enroll at the average cost premium (3 points)} \\
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item \textbf{Low-risk individuals:} No. The premium (\$800) is higher than their expected costs (\$400), so they will not enroll.
+    \item \textbf{High-risk individuals:} Yes. The premium (\$800) is lower than their expected costs (\$1,200), making it financially beneficial for them to enroll.
+\end{itemize}
+
+\textbf{1c) New average expected cost and premium adjustment (2 points)} \\
+If low-risk individuals drop out, the new average expected cost among enrollees (only high-risk individuals) is \textbf{\$1,200}. If the insurer adjusts the premium to equal this new average cost, the premium will \textbf{rise} from \$800 to \$1,200.
+
+\textbf{1d) Adverse selection and the death spiral (3 points)} \\
+This example illustrates adverse selection because the community-rated premium disproportionately attracts sicker, high-cost individuals, while driving away healthier individuals. As healthy people drop out, the average cost of the remaining pool increases, forcing the insurer to raise premiums further; this creates a feedback loop where healthy people keep dropping out as premiums rise, eventually leading to a ``death spiral'' where the market may collapse.
+
+\vspace{1em}
+
+\textbf{Problem 2. Expected loss, fair premium, and risk aversion (10 points)}
+
+\textbf{2a) Expected medical spending (2 points)} \\
+\begin{align*}
+    \text{Expected Spending} &= 0.02 \times \$50,000 + 0.98 \times \$0 = \textbf{\$1,000}
+\end{align*}
+
+\textbf{2b) Actuarially fair premium (2 points)} \\
+The actuarially fair premium is exactly equal to the expected loss, which is \textbf{\$1,000}.
+
+\textbf{2c) Maximum administrative load (3 points)} \\
+The maximum dollar administrative load is \textbf{\$500}. The consumer will purchase the policy as long as the total premium does not exceed their maximum willingness to pay (\$1,500). Since the expected loss (fair premium) is \$1,000, the insurer can add up to \$500 in administrative load (\$1,500 - \$1,000 = \$500).
+
+\textbf{2d) Relationship between expected loss, administrative load, and willingness to pay (3 points)} \\
+An individual's willingness to pay for insurance is the sum of their expected loss and the risk premium they are willing to pay to eliminate financial uncertainty. Because this person is risk-averse, their willingness to pay (\$1,500) exceeds their expected loss (\$1,000), which creates a margin that justifies the insurer charging an above-fair premium to cover the administrative load (up to \$500) while still making the transaction mutually beneficial.
+
+\end{document}
